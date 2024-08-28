@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<style>
+.button {
+padding: 10px;
+width: 50px;
+height: 50px;
+}
+</style>
+<script>
+function add() {
+    document.getElementById("calc").value += "+"    
+}
+function minus() {
+    document.getElementById("calc").value += "-"        
+}
+function times() {
+    document.getElementById("calc").value += "*"    
+    
+}
+function devide() {
+    document.getElementById("calc").value += "/"    
+}
+function one() {
+    document.getElementById("calc").value += "1"    
+}
+
+function two() {
+    document.getElementById("calc").value += "2"    
+}
+
+function three() {
+    document.getElementById("calc").value += "3"    
+}
+
+function four() {
+    document.getElementById("calc").value += "4"    
+}
+
+function five() {
+    document.getElementById("calc").value += "5"    
+}
+
+function six() {
+    document.getElementById("calc").value += "6"    
+}
+
+function seven() {
+    document.getElementById("calc").value += "7"    
+}
+
+function eight() {
+    document.getElementById("calc").value += "8"    
+}
+
+function nine() {
+    document.getElementById("calc").value += "9"    
+}
+function zero() {
+    document.getElementById("calc").value += "0"    
+}
+function reset() {
+    document.getElementById("calc").value = ""   
+    document.getElementById("result").value = ""  
+}
+function result() {
+    var result = eval(document.getElementById("calc").value);
+    if(result == "Infinity") result = "겁나 큰수"
+    if(result == "-Infinity") result = "겁나 작은 수"
+    document.getElementById("result").value = result;
+}
+</script>
+<body>
+<input type=text id="calc" value=""><br>
+<input type=text id="result" value=""><br>
+<input type=button value="1" onClick="one()" class="button">
+<input type=button value="2" onClick="two()" class="button">
+<input type=button value="3" onClick="three()" class="button">
+<input type=button value="+" onClick="add()" class="button"><br>
+<input type=button value="4" onClick="four()" class="button">
+<input type=button value="5" onClick="five()" class="button">
+<input type=button value="6" onClick="six()" class="button">
+<input type=button value="-" onClick="minus()" class="button"><br>
+<input type=button value="7" onClick="seven()" class="button">
+<input type=button value="8" onClick="eight()" class="button">
+<input type=button value="9" onClick="nine()" class="button">
+<input type=button value="*" onClick="times()" class="button"><br>
+<input type=button value="CE" onClick="reset()" class="button">
+<input type=button value="0" onClick="zero()" class="button">
+<input type=button value="=" onClick="result()" class="button">
+<input type=button value="/" onClick="devide()" class="button"><br>
+
+
+
+
+</body>
+</html>
